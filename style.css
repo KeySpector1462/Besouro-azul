@@ -36,6 +36,11 @@ header a{
     font-size: 1.5rem;
     border-bottom: 4px solid transparent;
 }
+header i.fas{
+    display: block;
+    color: #D040FF;
+    font-size: 32px;
+}
 header a:hover{
     border-bottom: 4px solid #22fffe;
 }
@@ -98,7 +103,6 @@ footer{
 }
 
 /* TABLET */
-
 @media (max-width:768px){
     body{
         padding: 32px 0px 0px 0px;
@@ -123,18 +127,75 @@ footer{
         text-align: center;
     }  
 
-    .trailers{
+    .trailer{
         flex-direction: column;
     }
 
-    .trailers img{
+    .trailer{
         width: 500px;
 
     }
-        .trailers a:nth-child(3){
+        .trailer a:nth-child(2){
         display: none;
+        align-items: center;
     }
     footer{
+        display: none;
+    }
+}
+
+/*MOBILE*/
+@media (max-width:480px){
+    body{
+        background-image: url(./img/background-mobile\ 1.png);
+    }
+    header{
+        justify-content: space-between;
+        padding: 0px 24px 0 24px;
+        align-items: center;
+    }
+    header a{
+        border-bottom: none;
+        height: 48px;
+    }
+    header a:not(.logo-dc)
+
+
+    header i.fa-solid{
+        display: block;
+        color:#D040FF;
+        font-size: 32px;
+    }
+    header a:not(.logo-dc){
+        display: none;
+    }
+    .descricao{
+        padding: 0;
+        justify-content: flex-end;
+        align-items: center;
+        height: 100%;
+        padding-bottom: 30px;
+    }
+    .descricao img{
+        width: 95vw;
+    }
+    .descricao a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: none;
+        width: 200px;
+        height: 50px;
+        background-color: #D040FF;
+        border: 4px solid #22fffe;
+        color: #fff;
+        font-size: 1.3rem;
+        border-radius: 50px;
+    }
+    .descricao p{
+    display: none;
+    }
+    .trailer{
         display: none;
     }
 }
